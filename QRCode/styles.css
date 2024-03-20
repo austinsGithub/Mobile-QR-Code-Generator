@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+body {
+  font-family: 'Poppins';
+  background: black;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+
+  
+}
+
+/* Container background color */
+.container {
+  color: white;
+  box-shadow:40 0 40px -10px rgba(0,0,0,.3),
+  0 0 25px -15px rgba(0,0,0,.2); 
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  borer:  3px solid white;
+
+  height: 90vh;
+  max-width: 500px;
+  padding: 30px;
+  width: 100%;
+}
+/* Default styles for card inputs */
+.card-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+}
+
+h1 {
+  color: #000000;  font-family: 'Poppins';
+  font-weight: 800px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-container,
+.logo-container,
+.qrCodeType {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.logo-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+#logoInput {
+  margin-bottom: 10px;
+}
+
+
+
+
+button {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+#saveButton {
+  background-color: #308ef0;
+  color: white;
+  margin-left: 10px;
+}
+
+.switch-input-btn {
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 5px;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+  text-align:center;
+  position:relative;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  color:black;
+
+  border:0;
+  cursor:pointer;
+
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+  border-radius:0 10px 10px 10px;
+  -webkit-transition:all .5s;
+  -moz-transition:all .5s;
+  transition:all .5s;
+}
+
+.switch-input-btn.active,
+.switch-input-btn:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: 2px solid white;
+}
+#qrCodeContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  height: 200px; /* Adjust the height as per your requirements */
+  
+}
+
+#qrCodeContainer img {
+  display: none;
+
+
+}
+
+#qrCodeContainer img:nth-child(1) {
+  display: block;
+}
+
+#loadingIcon {
+  display: none;
+  text-align: center;
+}
+
+#successMessage,
+#errorMessage {
+  display: none;
+  font-size: 14px;
+  text-align: center;
+}
+
+#successMessage {
+  color: #27ae60;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#errorMessage {
+  color: #e74c3c;  font-size: 16px;
+  font-weight: bold;
+}
+
+.size-container {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.slider {
+  background-color: #ffffff;
+  border-radius: 5px;
+  height: 5px;
+  margin-top: 10px;
+  outline: none;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.slider:focus {
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #000000;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  margin-top: -7.5px;
+  width: 20px;
+}
+
+.slider::-moz-range-thumb {
+  background-color: #778da9;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.slider::-ms-thumb {
+  background-color: #778da9;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.size-value {
+  color: #1b263b;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+
+
+
+/* Save button */
+.save-btn {
+  background-color: #ffffff;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+.save-btn:hover {
+  background-color: #868686;
+  position: relative;
+  color: black;
+}
+
+.save-button-container {
+  text-align: center;
+}
+
+
+
+.card-inputs input {
+  width: 100%;
+  padding: -4px;
+  font-size: 16px;
+}
+
+/* Responsive styles for card inputs */
+@media screen and (max-width: 600px) {
+  .card-inputs {
+    grid-template-columns: 1fr;
+  }
+}
+/* Logo and color picker container */
+.logo-container,
+.color-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.logo-container label,
+.color-picker-container label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#logoInput {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#colorPicker {
+  cursor: pointer;
+}
+.container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.input-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-inputs {
+ 
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.card-inputs input[type="text"],
+.card-inputs input[type="number"],
+.card-inputs input[type="email"],
+.card-inputs input[type="password"],
+.card-inputs textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#inputField {
+  margin: 0;
+}
+.input-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto; /* specifies two rows */
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-inputs {
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.card-inputs input[type="text"],
+.card-inputs input[type="number"],
+.card-inputs input[type="email"],
+.card-inputs input[type="password"],
+.card-inputs textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+#inputField {
+  position: relative;
+  margin-top: 50px;
+  align-items: center;
+  border: none;
+  border-bottom: 2px solid #ffffff;  
+  border-radius: 0;  
+  font-size: 16px;  
+  color: #ffffff;  
+  background: transparent;
+  margin: 1rem ;
+  outline: none;  
+  transition: border-bottom-color 0.3s ease;  
+}
+
+#inputField:active, 
+#inputField:focus {
+  border-bottom-color: #8282fa;  
+}
+
+
+#generateButton {
+  position: relative;
+  display: block;  /* Make the button take up the whole line */
+  margin: rem auto;  /* Center the button and give some space on the top and bottom */
+  background: #000000;  /* Make the button white */
+  color: #ffffff;  /* Change the text color to black */
+  border: 3px solid white;  /* Remove the border */
+  font-size: 12px;  /* Increase the font size */
+  transition: all .2s ease-in-out;  /* Add transition for all properties for smoother interaction */
+}
+
+#generateButton:hover {
+  background: white;  /* Change the background to black when hovering */
+  color: black;  /* Change the text color to white when hovering */
+}
+
+
+.accordion-container {
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.accordion {
+color: #444;
+padding: 18px;
+text-align: center;
+width: auto; /* make the width of the accordion equal to its content (the button) */
+outline: none;
+transition: 0.4s;
+}
+
+.accordion button {
+background-color: #ffffff; /* Green */
+border: none;
+color: rgb(0, 0, 0);
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+cursor: pointer;
+position: relative;
+top: 1vh;
+}
+
+.messages{
+  position: relative;
+  bottom: 3vh;
+}
+
+.input-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
