@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>QR Code Generator</title>
-      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔗</text></svg>">
-      <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="styles.css">
-   </head>
-   <body>
-      <div class="burger"></div>
-      <div class="container">
-         <h1 >QR Code Generator</h1>
-         
-         <div class="qrCodeType">
-            <button class="switch-input-btn active" id="urlInputBtn">URL</button>
-            <button class="switch-input-btn " id="textInputBtn">Text</button>
-            <button class="switch-input-btn" id="emailInputBtn">Email</button>
-            <button class="switch-input-btn" id="vCardBtn">vCard</button> 
-         </div>
-         <div class="input-container2">
-            <input type="text" id="inputField" placeholder="Enter text..."> <br>
-            <button id="generateButton">Generate QR Code</button>
-         </div>
-         <div class="input-container card-inputs">
-            <input type="text" id="nameField" placeholder="Enter name" style="display:none">
-            <input type="text" id="emailField" placeholder="Enter email" style="display:none">
-            <input type="text" id="phoneField" placeholder="Enter phone" style="display:none">
-            <input type="text" id="companyField" placeholder="Enter company" style="display:none">
-            <input type="text" id="websiteField" placeholder="Enter website" style="display:none">
-            <input type="text" id="addressField" placeholder="Enter address" style="display:none">
-         </div>
-         <div class="messages">
-            <i class="fas fa-spinner fa-spin fa-3x" id="loadingIcon" style="display: none;"></i>
-            <p id="successMessage"></p>
-            <p id="errorMessage"></p>
-         </div>
-         <div class="accordion-container">
-            <div class="accordion">
-               <button type="button">Upload Logo</button>
-            </div>
-            <div class="panel" style="display:none">
-               <!-- panel is hidden by default -->
-               <div class="logo-container">
-                  <p style="color:white">Currently, we do not support saving logos as SVG. We're actively developing this feature.
-                  </p>
-                  <label for="logoInput"></label>
-                  <input type="file" id="logoInput" accept="image/*">
-                  <div id="logoPreviewContainer"></div>
-               </div>
-            </div>
-         </div>
-         <div id="qrCodeContainer"></div>
-         <br>
-         <div class="save-button-container">
-            <div class="size-container" id="sizeContainer">
-               <div><label for="foreground-color">  Foreground Color : </label> 
-                  <input type="color" id="foreground-color" value="#000000"> <br>
-                  <label for="background-color">Background Color :</label>
-                  <input type="color" id="background-color" value="#ffffff">
-               </div>
-               <label for="sizeRange">Size: <span id="dimensions">200x200</span></label>
-               <input type="range" min="100" max="500" value="200" class="slider" id="sizeRange">
-            </div>
-            <button class="save-btn" id="savePngButton">Save as PNG</button>
-            <button class="save-btn" id="saveSvgButton">Save as SVG</button>
-         </div>
-      </div>
-      <script>
-         //// logo button accordion 
-         var acc = document.getElementsByClassName("accordion");
-         var i;
-         
-         for (i = 0; i < acc.length; i++) {
-           acc[i].addEventListener("click", function() {
-             this.classList.toggle("active");
-             var panel = this.nextElementSibling;
-             if (panel.style.display === "block") {
-               panel.style.display = "none";
-             } else {
-               panel.style.display = "block";
-             }
-           });
-         }
-      </script>
-      <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-           <script src="main.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QR Code Generator</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔗</text></svg>" />
+        <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="burger"></div>
 
-   </body>
+        <div class="container">
+            <h1>QR Code Generator</h1>
+
+            <div class="qrCodeType">
+                <button class="switch-input-btn active" id="urlInputBtn">URL</button>
+                <button class="switch-input-btn" id="textInputBtn">Text</button>
+
+                <button class="switch-input-btn" id="emailInputBtn">Email</button>
+                <button class="switch-input-btn" id="vCardBtn">vCard</button>
+            </div>
+            <div class="input-container2">
+                <input type="text" id="inputField" placeholder="Enter text..." /> <br />
+                <button id="generateButton">Generate QR Code</button>
+            </div>
+
+            <div class="input-container card-inputs">
+                <input type="text" id="nameField" placeholder="Enter name" style="display: none;" />
+                <input type="text" id="emailField" placeholder="Enter email" style="display: none;" />
+                <input type="text" id="phoneField" placeholder="Enter phone" style="display: none;" />
+                <input type="text" id="companyField" placeholder="Enter company" style="display: none;" />
+                <input type="text" id="websiteField" placeholder="Enter website" style="display: none;" />
+                <input type="text" id="addressField" placeholder="Enter address" style="display: none;" />
+            </div>
+
+            <div class="messages">
+                <i class="fas fa-spinner fa-spin fa-3x" id="loadingIcon" style="display: none;"></i>
+                <p id="successMessage"></p>
+                <p id="errorMessage"></p>
+            </div>
+            <div class="accordion-container">
+                <div class="accordion">
+                    <button type="button">Upload Logo</button>
+                </div>
+                <div class="panel" style="display: none;">
+                    <div class="logo-container">
+                        <p style="color: white;">Currently, we do not support saving logos as SVG. We're actively developing this feature.</p>
+                        <label for="logoInput"></label>
+                        <input type="file" id="logoInput" accept="image/*" />
+                        <div id="logoPreviewContainer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="qrCodeContainer"></div>
+
+            <br />
+            <div class="save-button-container">
+                <div class="size-container" id="sizeContainer">
+                    <div>
+                        <label for="foreground-color"> Foreground Color : </label> <input type="color" id="foreground-color" value="#000000" /> <br />
+                        <label for="background-color">Background Color :</label>
+                        <input type="color" id="background-color" value="#ffffff" />
+                    </div>
+                    <label for="sizeRange">Size: <span id="dimensions">200x200</span></label>
+
+                    <input type="range" min="100" max="500" value="200" class="slider" id="sizeRange" />
+                </div>
+                <button class="save-btn" id="savePngButton">Save as PNG</button> <button class="save-btn" id="saveSvgButton">Save as SVG</button>
+            </div>
+        </div>
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+
+        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+        <script src="main.js"></script>
+    </body>
 </html>
