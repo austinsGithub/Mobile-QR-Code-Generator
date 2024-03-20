@@ -38,7 +38,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-}
+
 
 h1 {
   color: #000000;  font-family: 'Poppins';
@@ -77,16 +77,6 @@ button {
   padding: 8px 12px;
   transition: background-color 0.3s;
 }
-
-
-
-
-
-
-
-
-
-
 
 #saveButton {
   background-color: #308ef0;
@@ -130,7 +120,7 @@ button {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
-  height: 200px; /* Adjust the height as per your requirements */
+  height: 200px; 
   
 }
 
@@ -220,9 +210,6 @@ button {
   margin-left: 10px;
 }
 
-
-
-
 /* Save button */
 .save-btn {
   background-color: #ffffff;
@@ -249,21 +236,17 @@ button {
   text-align: center;
 }
 
-
-
 .card-inputs input {
   width: 100%;
   padding: -4px;
   font-size: 16px;
 }
 
-/* Responsive styles for card inputs */
 @media screen and (max-width: 600px) {
   .card-inputs {
     grid-template-columns: 1fr;
   }
 }
-/* Logo and color picker container */
 .logo-container,
 .color-picker-container {
   display: flex;
@@ -336,7 +319,7 @@ button {
 .input-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto; /* specifies two rows */
+  grid-template-rows: auto auto; 
   grid-gap: 10px;
   margin-bottom: 10px;
 }
@@ -381,18 +364,18 @@ button {
 
 #generateButton {
   position: relative;
-  display: block;  /* Make the button take up the whole line */
-  margin: rem auto;  /* Center the button and give some space on the top and bottom */
-  background: #000000;  /* Make the button white */
-  color: #ffffff;  /* Change the text color to black */
-  border: 3px solid white;  /* Remove the border */
-  font-size: 12px;  /* Increase the font size */
-  transition: all .2s ease-in-out;  /* Add transition for all properties for smoother interaction */
+  display: block;  
+  margin: rem auto; 
+  background: #000000;  
+  color: #ffffff;
+  border: 3px solid white;  
+  font-size: 12px;  
+  transition: all .2s ease-in-out;  
 }
 
 #generateButton:hover {
-  background: white;  /* Change the background to black when hovering */
-  color: black;  /* Change the text color to white when hovering */
+  background: white;  
+  color: black; 
 }
 
 
@@ -408,13 +391,13 @@ button {
 color: #444;
 padding: 18px;
 text-align: center;
-width: auto; /* make the width of the accordion equal to its content (the button) */
+width: auto; 
 outline: none;
 transition: 0.4s;
 }
 
 .accordion button {
-background-color: #ffffff; /* Green */
+background-color: #ffffff; 
 border: none;
 color: rgb(0, 0, 0);
 text-align: center;
