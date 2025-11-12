@@ -1,33 +1,31 @@
 README
 
-This HTML file is a simple QR Code Generator for quickly creating QR codes from URLs, text, emails, or vCards.
+This HTML file lets you create QR codes for URLs, text, emails, or vCards.
 
 How to Use:
 
-Choose Type: Click URL, Text, Email, or vCard.
+Choose the type: URL, Text, Email, or vCard.
 
-Enter Data: Fill in the required field(s).
+Enter your information.
 
-Generate: Click Generate QR Code.
+Click Generate QR Code.
 
-Customize: Change colors or size with the controls.
+Adjust color or size if you want.
 
-Save: Download as PNG or SVG.
+Save as PNG or SVG.
 
-Add Logo (if you want): upload an image to include in the QR code.
+(Optional) Add a logo image.
 
 Notes:
 
-The QR code appears in the display area.
+The QR code appears on the page.
 
-Errors during generation will show on screen.
+Errors will be shown if something goes wrong.
 
-vCards require all fields to be filled before generating.
+For vCards, fill in all fields first.
 
 Credits:
+Built with the qrcode library, using icons from Font Awesome and Lordicon, and fonts from Google Fonts.
 
-Built with the qrcode library.
-
-Icons by Font Awesome and Lordicon.
-
-Fonts from Google Fonts.
+Support:
+For questions or feedback, contact me.
