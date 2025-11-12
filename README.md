@@ -1,45 +1,33 @@
-**README**
+README
 
-This HTML file serves as a QR Code Generator, enabling users to create QR codes swiftly for various data types such as URLs, text, email addresses, and vCards.
+This HTML file is a simple QR Code Generator for quickly creating QR codes from URLs, text, emails, or vCards.
 
-**Getting Started:**
+How to Use:
 
-Open this HTML file in a web browser compatible with HTML5 and JavaScript to commence generating QR codes.
+Choose Type: Click URL, Text, Email, or vCard.
 
-**Usage:**
+Enter Data: Fill in the required field(s).
 
-1. **Select QR Code Type:**
-   - Use buttons labeled "URL," "Text," "Email," or "vCard" to choose the data type you wish to encode.
+Generate: Click Generate QR Code.
 
-2. **Input Data:**
-   - Enter the relevant data into the provided input field based on your selection.
+Customize: Change colors or size with the controls.
 
-3. **Generate QR Code:**
-   - Click "Generate QR Code" to create the QR code.
+Save: Download as PNG or SVG.
 
-4. **Customize QR Code:**
-   - Adjust colors using the color pickers.
-   - Alter the size with the slider.
+Add Logo (if you want): upload an image to include in the QR code.
 
-5. **Save QR Code:**
-   - After generation, save the QR code as a PNG or SVG file using the respective buttons.
-   
-6. **Upload Logo (Optional):**
-   - Add a logo to the QR code by selecting "Upload Logo."
-   - Currently, only image formats are supported for logo upload.
+Notes:
 
-**Notes:**
+The QR code appears in the display area.
 
-- The QR code will appear in the designated area on the webpage.
-- In case of errors during generation, an error message will display.
-- For vCard input, complete the provided fields before generating the QR code.
+Errors during generation will show on screen.
 
-**Credits:**
+vCards require all fields to be filled before generating.
 
-- QR code generation utilizes the `qrcode` library.
-- Icons are sourced from Font Awesome and Lordicon.
-- Fonts are obtained from Google Fonts.
+Credits:
 
-**Support:**
+Built with the qrcode library.
 
-For inquiries or feedback regarding this QR Code Generator, please contact the developer(s).
+Icons by Font Awesome and Lordicon.
+
+Fonts from Google Fonts.
