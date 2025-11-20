@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-
 body {
   font-family: 'Poppins';
   background: black;
@@ -12,36 +11,30 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-
-
-  
 }
 
-/* Container background color */
 .container {
   color: white;
-  box-shadow:40 0 40px -10px rgba(0,0,0,.3),
+  box-shadow: 0 0 40px -10px rgba(0,0,0,.3),
   0 0 25px -15px rgba(0,0,0,.2); 
-
   background-repeat: no-repeat;
   background-size: cover;
-  borer:  3px solid white;
-
+  border: 3px solid white;
   height: 90vh;
   max-width: 500px;
   padding: 30px;
   width: 100%;
 }
-/* Default styles for card inputs */
+
 .card-inputs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
-
 h1 {
-  color: #000000;  font-family: 'Poppins';
+  color: #000000;
+  font-family: 'Poppins';
   font-weight: 800px;
   margin-bottom: 20px;
   text-align: center;
@@ -63,9 +56,6 @@ h1 {
 #logoInput {
   margin-bottom: 10px;
 }
-
-
-
 
 button {
   border: none;
@@ -93,21 +83,19 @@ button {
   margin: 0 5px;
   padding: 5px 10px;
   transition: background-color 0.3s;
-  text-align:center;
-  position:relative;
-  display:inline-block;
-  width:50px;
-  height:50px;
-  color:black;
-
-  border:0;
-  cursor:pointer;
-
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  color: black;
+  border: 0;
+  cursor: pointer;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
-  border-radius:0 10px 10px 10px;
-  -webkit-transition:all .5s;
-  -moz-transition:all .5s;
-  transition:all .5s;
+  border-radius: 0 10px 10px 10px;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
 }
 
 .switch-input-btn.active,
@@ -116,18 +104,16 @@ button {
   color: rgb(255, 255, 255);
   border: 2px solid white;
 }
+
 #qrCodeContainer {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
   height: 200px; 
-  
 }
 
 #qrCodeContainer img {
   display: none;
-
-
 }
 
 #qrCodeContainer img:nth-child(1) {
@@ -153,7 +139,8 @@ button {
 }
 
 #errorMessage {
-  color: #e74c3c;  font-size: 16px;
+  color: #e74c3c;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -210,7 +197,6 @@ button {
   margin-left: 10px;
 }
 
-/* Save button */
 .save-btn {
   background-color: #ffffff;
   border: none;
@@ -222,7 +208,7 @@ button {
   margin: 10px 2px;
   cursor: pointer;
   padding: 10px 24px;
-  border-radius: 4px;
+  border-radius: 5px;
   transition-duration: 0.4s;
 }
 
@@ -242,11 +228,13 @@ button {
   font-size: 16px;
 }
 
+/* stack inputs on mobile */
 @media screen and (max-width: 600px) {
   .card-inputs {
     grid-template-columns: 1fr;
   }
 }
+
 .logo-container,
 .color-picker-container {
   display: flex;
@@ -272,6 +260,7 @@ button {
 #colorPicker {
   cursor: pointer;
 }
+
 .container {
   text-align: center;
   margin-bottom: 20px;
@@ -290,7 +279,6 @@ button {
 }
 
 .card-inputs {
- 
   border-radius: 4px;
   padding: 8px;
 }
@@ -307,6 +295,7 @@ button {
   box-sizing: border-box;
   margin-bottom: 10px;
 }
+
 .input-container {
   display: flex;
   justify-content: space-between;
@@ -316,6 +305,7 @@ button {
 #inputField {
   margin: 0;
 }
+
 .input-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -341,6 +331,7 @@ button {
   box-sizing: border-box;
   margin-bottom: 10px;
 }
+
 #inputField {
   position: relative;
   margin-top: 50px;
@@ -351,7 +342,7 @@ button {
   font-size: 16px;  
   color: #ffffff;  
   background: transparent;
-  margin: 1rem ;
+  margin: 1rem;
   outline: none;  
   transition: border-bottom-color 0.3s ease;  
 }
@@ -361,11 +352,10 @@ button {
   border-bottom-color: #8282fa;  
 }
 
-
 #generateButton {
   position: relative;
   display: block;  
-  margin: rem auto; 
+  margin: 1rem auto; 
   background: #000000;  
   color: #ffffff;
   border: 3px solid white;  
@@ -378,7 +368,6 @@ button {
   color: black; 
 }
 
-
 .accordion-container {
   margin-top: -50px;
   display: flex;
@@ -388,27 +377,27 @@ button {
 }
 
 .accordion {
-color: #444;
-padding: 18px;
-text-align: center;
-width: auto; 
-outline: none;
-transition: 0.4s;
+  color: #444;
+  padding: 18px;
+  text-align: center;
+  width: auto; 
+  outline: none;
+  transition: 0.4s;
 }
 
 .accordion button {
-background-color: #ffffff; 
-border: none;
-color: rgb(0, 0, 0);
-text-align: center;
-text-decoration: none;
-font-size: 16px;
-cursor: pointer;
-position: relative;
-top: 1vh;
+  background-color: #ffffff; 
+  border: none;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  top: 1vh;
 }
 
-.messages{
+.messages {
   position: relative;
   bottom: 3vh;
 }
